@@ -10,6 +10,17 @@ $(document).ready(function() {
     newList.name + "</span></li>");
 
     $('input#new-list').val("");
-  });
 
+  $(".list-name").last().click(function() {
+    $("#show-list-name h2").text(newList.name);
+    $("#show-list-name").show();
+
+
+
+    // newList.tasks.forEach(function(task) {
+    //   $("ul#tasks").append("<li>" + list.taskName + ": ");
+    // });
+
+  });
+  });
 });
