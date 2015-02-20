@@ -11,15 +11,24 @@ $(document).ready(function() {
 
     $('input#new-list').val("");
 
-  $(".list-name").last().click(function() {
-    $("#show-list-name h2").text(newList.name);
-    $("#show-list-name").show();
+    $(".list-name").last().click(function() {
+      $("#show-list-name h2").text(newList.name);
+      $("#show-list-name").show();
+
+    $("form#new-tasks").submit(function(event) {
+      event.preventDefault();
+
+      var newTask = $("input#new-task").val();
+      newList.tasks.push(newTask);
+
+      $("ul#tasks").append("<li>" + newList.tasks.slice(-1) + "</li>");
+
+
+    })
 
 
 
-    // newList.tasks.forEach(function(task) {
-    //   $("ul#tasks").append("<li>" + list.taskName + ": ");
-    // });
+
 
   });
   });
