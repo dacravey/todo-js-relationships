@@ -1,3 +1,12 @@
-#result {
+#show-list-name {
   display: none;
+}
+
+#lists li {
+  cursor: pointer;
+  color: #0088cc;
+}
+
+#lists li:hover {
+  text-decoration: underline;
 }
